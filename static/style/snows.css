@@ -1,0 +1,123 @@
+.snow {
+	height: 50px;
+	width: 100px;
+	background-image: url("../images/snow.png")
+}
+
+.side-snow {
+	height: 50px;
+	width: 100px;
+	background-image: url("../images/sidesnow.png")
+}
+
+#snow-1 {
+	top: 3500px;
+}
+
+#snow-2 {
+	top: 700px;
+}
+
+#snow-3 {
+	top: 850px;
+	left: 15%;
+}
+
+#snow-4 {
+	top: 1100px;
+	right: 25%;
+}
+
+#snow-5 {
+	top: 1400px;
+	left: 15%;
+}
+
+#snow-6 {
+	top: 1900px;
+	left: 50%;
+}
+
+#snow-7 {
+	top: 2300px;
+}
+
+#snow-8 {
+	top: 2450px;
+}
+
+#snow-9 {
+	top: 3000px;
+	left: 15%;
+}
+
+#snow-10 {
+	top: 3500px;
+	right: 25%;
+}
+
+#snow-11 {
+	top: 3900px;
+	left: 15%;
+}
+
+#snow-12 {
+	top: 4700px;
+	left: 50%;
+}
+
+#snow-13 {
+	top: 5100px;
+}
+
+#snow-14 {
+	top: 5200px;
+}
+
+#snow-15 {
+	top: 5450px;
+	left: 15%;
+}
+
+#snow-16 {
+	top: 5900px;
+	right: 25%;
+}
+
+#snow-17 {
+	top: 6200px;
+	left: 15%;
+}
+
+#snow-18 {
+	top: 6700px;
+	left: 50%;
+}
+
+#snow-19 {
+	top: 7000px;
+}
+
+#snow-20 {
+	top: 7250px;
+}
+
+#snow-21 {
+	top: 8000px;
+	left: 15%;
+}
+
+#snow-22 {
+	top: 8500px;
+	right: 25%;
+}
+
+#snow-23 {
+	top: 8900px;
+	left: 15%;
+}
+
+#snow-24 {
+	top: 9700px;
+	left: 5%;
+}

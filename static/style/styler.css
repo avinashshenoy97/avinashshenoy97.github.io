@@ -1,0 +1,317 @@
+* {
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0px;
+	min-width: 650px;
+}
+
+hr {
+	border-color: black;
+	background-color: black;
+	opacity: 0.4;
+	position: absolute;
+	z-index: 1;
+	width: 90%;
+	left: 10%;
+}
+
+#bg {
+	height: 7500px;
+	width: 100%;
+	z-index: 0;
+}
+
+#header {
+	max-height: 50px;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+#ticker {
+	background-color: black;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	z-index: 2;
+	height: 200px;
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.ticker-border {
+	background-color: black;
+	position: absolute;
+	top: 50px;
+	z-index: 4;
+	height: 200px;
+	width: 20px;
+}
+
+.cell {
+	background-color: gray;
+	display: block;
+	position: absolute;
+	height: 10px;
+	width: 10px;
+}
+
+#name {
+	height: 200px;
+	position: absolute;
+	top: 50px;
+	left: 100%;
+	z-index: 3;
+}
+
+#eduh {
+	position: absolute;
+	top: 825px;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100px;
+	width: auto;
+}
+
+#bar {
+	background-color: #359fff;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 1000px;
+}
+
+#ibar {
+	background-color: red;
+	height: 30px;
+	width: 0%;
+	position: absolute;
+	top: 5px;
+	transition: width 2s;
+	-webkit-transition: width 2s;
+	-moz-transition: width 2s;
+	-o-transition: width 2s;
+}
+
+.seperator {
+	background-image: url("../images/seperator.png");
+	height: 40px;
+	width: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: left 2s;
+	-webkit-transition: left 2s;
+	-moz-transition: left 2s;
+	-o-transition: left 2s;
+}
+
+.label {
+	height: auto;
+	width: 200px;
+	max-height: 50px;
+	position: absolute;
+	top: 950px;
+	left: -100%;
+	z-index: 2;
+	transition: left 2s;
+	-webkit-transition: left 2s;
+	-moz-transition: left 2s;
+	-o-transition: left 2s;
+}
+
+.mlabel {
+	height: auto;
+	max-height: 50px;
+	position: absolute;
+	top: 1050px;
+	left: -100%;
+	z-index: 2;
+	transition: left 2s;
+	-webkit-transition: left 2s;
+	-moz-transition: left 2s;
+	-o-transition: left 2s;
+}
+
+#tree {
+	width: 50px;
+	height: 100px;
+	background-image: url("../images/tree.png")
+}
+
+#yeti {
+	display: none;
+	position: fixed;
+	top: 210px;
+	z-index: 2;
+}
+
+.left {
+	position: absolute;
+	left: 5%;
+}
+
+.right {
+	position: absolute;
+	right: 5%;
+}
+
+.status {
+	position: absolute;
+	max-width: 25%;
+	z-index: 2;
+}
+
+#langh {
+	display: block;
+	margin: 0 auto;
+	max-height: 50px;
+	margin-bottom: 50px;
+}
+
+#lang {
+	position: absolute;
+	top: 1750px;
+	left: 0px;
+	height: 650px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.langs {
+	height: 100px;
+	width: 100px;
+	display: block;
+	margin: 10px;
+	margin-bottom: 0;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+}
+
+#white {
+	background-color: white;
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.flags {
+	position: absolute;
+	bottom: -100%;
+	transition: bottom 1s;
+	-webkit-transition: bottom 1s;
+	-moz-transition: bottom 1s;
+	-o-transition: bottom 1s;
+}
+
+.trees {
+	position: absolute;
+	bottom: -100%;
+	transition: bottom 1s;
+	-webkit-transition: bottom 1s;
+	-moz-transition: bottom 1s;
+	-o-transition: bottom 1s;
+}
+
+#web {
+	position: absolute;
+	top: 3000px;
+	left: 0;
+	height: 890px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#webh {
+	display: block;
+	margin: 0 auto;
+	width: 450px;
+	height: auto;
+}
+
+#hob {
+	position: absolute;
+	top: 4500px;
+	height: 1100px;
+	width: 100%;
+}
+
+#hobh {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 350px;
+}
+
+#weighth {
+	width: 40%;
+	height: auto;
+	position: absolute;
+	top: 250px;
+	left: 5%;
+}
+
+#meweight {
+	width: 50%;
+	position: absolute;
+	top: 150px;
+	right: 0;
+}
+
+#barbell {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 600px;
+}
+
+.weights {
+	width: 10%;
+	height: auto;
+	position: absolute;
+	top: 529px;
+	left: 0;
+	transition: left 1s;
+	-webkit-transition: left 1s;
+	-moz-transition: left 1s;
+	-o-transition: left 1s;
+}
+
+#avi-container {
+	position: fixed;
+	top: 210px;
+	left: 40%;
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	z-index: 4;
+}
+
+#avi {
+	position: absolute;
+	left: -200px;
+	z-index: 4;
+}
+
+#end {
+	position: absolute;
+	right: 20px;
+	top: 9600px;
+	height: 400px;
+	width: 400px;
+}
