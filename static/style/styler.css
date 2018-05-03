@@ -315,3 +315,10 @@ hr {
 	height: 400px;
 	width: 400px;
 }
+
+#skipper {
+	font-family: 'Do Hyeon', sans-serif;
+	position: absolute;
+	top: 250px;
+	right: 10px;
+}

@@ -1,47 +1,112 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <script   src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
-        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-        
-        <link rel="stylesheet" href="static/index.css">
-        
-        <title>Avinash Shenoy</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="jumbotron">
-                <p id="titletext">Avinash Shenoy</p>
-                <img id="profilepic" src="https://github.com/avinashshenoy97.png">
-            </div>
-        </div>
-        <div class="container" style="height: 100%;">
-            <div class="row">
-                <div class="col-lg-3 sidebar" style="left: 0;">
-                    <ul>
-                        <li>Projects</li>
-                        
-                    </ul>
-                </div>
-                <div class="col-lg-6 middiv">
-                    
-                </div>
-                <div class="col-lg-3 sidebar" style="right: 0;">
-                    <p>Follow me :</p>
-                    <a href="https://github.com/avinashshenoy97"> <img src="static/Images/GitHub_Logo.png" height="30px" width="auto" style="display: block;"> </a>
-                    <a href="https://gitlab.com/avinashshenoy97"> <img src="static/Images/gitlab_logo.svg" height="30px" width="auto"> </a>
-                    <a href="https://www.instagram.com/avinashshenoy97/"> <img src="static/Images/instagram_logo.svg" height="30px" width="auto"> </a>
-                    <a href="https://www.facebook.com/avinashshenoy97"> <img src="static/Images/fb_logo.svg" height="30px" width="auto"> </a>
-                    <a href="https://twitter.com/avinashshenoy97"> <img src="static/Images/twitter_logo.svg" height="30px" width="auto"> </a>
-                    <a href="static/Images/snapcode.png"> <img src="static/Images/snapchat_logo.svg" height="30px" width="auto"> </a>
+<head>
+    <title>Avinash Shenoy's Personal Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style/profile.css" />
+</head>
 
-                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="avinash-shenoy-06245812b"><a class="LI-simple-link" href='https://in.linkedin.com/in/avinash-shenoy-06245812b?trk=profile-badge'>Avinash Shenoy</a></div>
-                </div>
+<body>
+    <div id="header">
+        <img src="static/images/header.jpg" />
+        <h1 id="typed"></h1>
+        
+        <script>
+            typeThis = "Hello, I'm Avinash Shenoy"
+            typer = []
+            
+            for(var i = 0 ; i <= typeThis.length ; i++) {
+                typer.push(typeThis.slice(0, i));
+            }
+            
+            var typed = 0;
+            var typeHere = document.getElementById("typed");
+            var typerHandle;
+            
+            function typeIt() {
+                typerHandle = setInterval(function() {
+                    typeHere.textContent = typer[typed++];
+                    if(typed > typer.length) {
+                        typeHere.textContent = typer[typer.length-1];
+                        clearInterval(typerHandle);
+                    }
+                }, 250);
+            }
+
+            typeIt();
+        </script>
+    </div>
+
+    <!--<img src="static/images/headerBG.png" id="headerBG" />-->
+    <div id="headerBG"></div>
+    <script>
+        document.getElementById("headerBG").style.height = document.getElementById("header").offsetHeight + "px";
+    </script>
+    
+    <nav class="navbar navbar-inverse" id="navBar">
+        <div class="container-fluid">
+            <div class="navbar-header navBarLeft" style="padding: 15px;">
+                <a class="navbar-brand navBarLeft" href="#header" onclick="restartSite();">Avinash Shenoy</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li style="padding: 0 !important;"><h4 id="findMeOn" style="color: white; margin: 0;"> Find Me On :</h4></li>
+                <li><a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a></li>
+                <li><a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a></li>
+                <li><a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a></li>
+                <li><a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/instaColorGlyph.png" style="width: 50px;"/> </a></li>
+                <li><a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/snapColorGlyph.png" style="width: 50px;"/> </a></li>
+            </ul>
         </div>
-        <script src="static/home.js"> </script>
-    </body>
+    </nav>
+
+    <script>
+        function iconColor(event) {
+            event.target.style.display = "none";
+            event.target.nextSibling.style.display = "block";
+        }
+
+        function iconDeColor(event) {
+            event.target.style.display = "none";
+            event.target.previousSibling.style.display = "block";
+            //console.log("de", event.target);
+        }
+        
+        var dis = document.getElementsByClassName("dis");
+        var enabs = document.getElementsByClassName("enab");
+        for(var e = 0 ; e < dis.length ; e++) {
+            dis[e].addEventListener("mouseover", iconColor);
+            enabs[e].addEventListener("mouseleave", iconDeColor);
+            
+            var temp = ((80 - dis[e].offsetHeight) / 2) + "px";
+            dis[e].parentNode.parentNode.style.setProperty("padding-top", temp, "important");
+            dis[e].parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
+            //dis[e].parentNode.parentNode.style.paddingTop = temp;
+            //dis[e].parentNode.parentNode.style.paddingBottom = temp;            
+            //console.log(dis[e].parentNode.parentNode);
+        }
+        
+        var tempele = document.getElementById("findMeOn");
+        var temp = ((80 - tempele.offsetHeight) / 2) + "px";
+        tempele.style.setProperty("padding-top", temp, "important");
+        tempele.style.setProperty("padding-bottom", temp, "important");
+    </script>
+
+    <div id="content" style="height: 1000px;">
+        Hello
+    </div>
+
+</body>
+
+<script src="static/profile.js"></script>
+
 </html>

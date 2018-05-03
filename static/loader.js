@@ -36,7 +36,7 @@ parLoadDiv.appendChild(forearm);
 parparDiv.appendChild(parLoadDiv);
 
 var heading = document.createElement("h2");
-heading.textContent = "Loading Interactive Resume !"
+heading.textContent = "Building Interactive Resume !"
 /*heading.style.visibility = "visible";
 heading.style.position = "absolute";
 heading.style.left = "40%";
