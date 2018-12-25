@@ -8,12 +8,17 @@
 		<title>Avinash Shenoy's Interactive Resume</title>
 		<script>
 			function loadPage() {
-				$('#toload').load('page.html');
+				$('#toload').load('page.html', function() {
+					setTimeout(function() {
+						clearLoader();
+						document.getElementById("toload").style.display = "";
+					}, 3000);
+				});
 			}
 		</script>
 	</head>
 	<body>
-		<div id="toload"></div>
+		<div style="display: none;" id="toload"></div>
 		<script onload="loadPage()" src="static/loader.js"></script>
 	</body>
 	<!--<script src="static/master.js" type="text/javascript"></script>-->

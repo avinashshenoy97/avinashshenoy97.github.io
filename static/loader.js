@@ -1,5 +1,5 @@
 var s = document.createElement("style");
-s.innerHTML = "img { display: inline; margin: auto; position: absolute; left: 40%;} * { visibility: hidden; } h2, a { visibility: visible; position: absolute; left: 40%; top: 250px; font-family: 'Do Hyeon', sans-serif; }";
+s.innerHTML = "img { display: inline; margin: auto; position: absolute; left: 40%;} body * { visibility: hidden; } h2, a { visibility: visible; position: absolute; left: 40%; top: 250px; font-family: 'Do Hyeon', sans-serif; }";
 s.id = "loaderStage";
 document.head.appendChild(s);
 
@@ -93,7 +93,6 @@ function clearLoader() {
 		sc.type = "text/javascript";
 		document.body.appendChild(sc);
 		parparDiv.remove();
-		document.getElementsByTagName("iframe")[0].style.display = "";
 		//upperArm.remove();
 		//bicep.remove();
 		//forearm.remove();
