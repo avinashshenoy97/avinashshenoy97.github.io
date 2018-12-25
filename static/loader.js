@@ -93,6 +93,7 @@ function clearLoader() {
 		sc.type = "text/javascript";
 		document.body.appendChild(sc);
 		parparDiv.remove();
+		document.getElementById("toload").style.display = "";
 		//upperArm.remove();
 		//bicep.remove();
 		//forearm.remove();
