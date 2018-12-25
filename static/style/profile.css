@@ -88,3 +88,43 @@ body {
 .enab:hover {
     display: block;
 }
+
+#about {
+    height: 500px;
+}
+
+#about .left {
+    float: left;
+    /*background-color: rgba(135, 206, 235, 0.2);*/
+    background-color: aliceblue;
+    height: inherit;
+    width: 40%;
+    border-right: 1px double silver;
+}
+
+#about .right {
+    float: right;
+    background-color: aliceblue;
+    width: 60%;
+    height: inherit;
+    border-left: 1px double silver;
+    padding: 0 10% 0 10%;
+}
+
+#about .right h3 {
+    margin-top: 30px;
+}
+
+#about img {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.sectionTitles {
+    font-family: 'Permanent Marker';
+    text-align: center;
+    margin-bottom: 10px;
+}

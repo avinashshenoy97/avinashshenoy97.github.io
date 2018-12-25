@@ -82,9 +82,8 @@ var handle3 = setInterval(function() {
 		hpos = 0;
 }, 1500);
 
-var handle = setInterval(function() {
-	if(/loaded|complete/.test(document.readyState)) {
-		clearInterval(handle);
+function clearLoader() {
+		// clearInterval(handle);
 		clearInterval(handle2);
 		clearInterval(handle3);
 		console.log("loaded");
@@ -94,10 +93,10 @@ var handle = setInterval(function() {
 		sc.type = "text/javascript";
 		document.body.appendChild(sc);
 		parparDiv.remove();
+		document.getElementsByTagName("iframe")[0].style.display = "";
 		//upperArm.remove();
 		//bicep.remove();
 		//forearm.remove();
 		//clearInterval(handle2);
-	}
-})
+}
 

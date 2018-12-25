@@ -3,12 +3,18 @@
 <head>
     <title>Avinash Shenoy's Personal Website</title>
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="static/style/profile.css" />
+    <link rel="stylesheet" type="text/css" href="static/style/timeline.css" />
 </head>
 
 <body>
@@ -37,11 +43,11 @@
                     }
                 }, 250);
             }
-
+            
             typeIt();
         </script>
     </div>
-
+    
     <!--<img src="static/images/headerBG.png" id="headerBG" />-->
     <div id="headerBG"></div>
     <script>
@@ -53,8 +59,8 @@
             <div class="navbar-header navBarLeft" style="padding: 15px;">
                 <a class="navbar-brand navBarLeft" href="#header" onclick="restartSite();">Avinash Shenoy</a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+            <ul class="nav navbar-nav" id="navLeftArea">
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#">Page 1</a></li>
                 <li><a href="#">Page 2</a></li>
             </ul>
@@ -68,13 +74,13 @@
             </ul>
         </div>
     </nav>
-
+    
     <script>
         function iconColor(event) {
             event.target.style.display = "none";
             event.target.nextSibling.style.display = "block";
         }
-
+        
         function iconDeColor(event) {
             event.target.style.display = "none";
             event.target.previousSibling.style.display = "block";
@@ -100,13 +106,69 @@
         tempele.style.setProperty("padding-top", temp, "important");
         tempele.style.setProperty("padding-bottom", temp, "important");
     </script>
-
+    
     <div id="content" style="height: 1000px;">
-        Hello
-    </div>
+        <div id="about">
+            <div class="left">
+                <img src="static/images/about.jpg" />
+            </div>
+            <div class="right">
+                <h1 class="sectionTitles">About Me</h1>
+                <div style="text-align: center;">
+                    <h3>Who Am I?</h3>
+                    <p>I'm Avinash Shenoy! A computer science engineering undergrad/gym rat in my 20s, currently living in Bangalore, the silicon valley of India!</p>
+                    
+                    <h3>What do I do?</h3>
+                    <p>I code. I lift. I read. I travel.</p>
+                    
+                    <h3>What do I really do?</h3>
+                    <p>I'm an undergrad student at PES University, pursuing a BTech degree in Computer Science and Engineering. </p>
 
-</body>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tempele = document.getElementById("about").children[0];
+            var temp = tempele.offsetWidth - tempele.children[0].offsetWidth;
+            tempele.children[0].style.marginLeft = tempele.children[0].style.marginRight = (temp / 2) + "px";
+            temp = tempele.offsetHeight - tempele.children[0].offsetHeight;
+            tempele.children[0].style.marginTop = tempele.children[0].style.marginBottom = (temp / 2) + "px";
+        </script>
+        
+        <div id="timeline-wrapper">
+            <!-- The Timeline -->
+            
+            <ul class="timeline">
 
-<script src="static/profile.js"></script>
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="flag">Centre for Cloud Computing and Big Data, PES University</span>
+                            <span class="time-wrapper"><span class="time">June 2017 - May 2018</span></span>
+                        </div>
+                        <div class="pos">Research Intern</div>
+                        <div class="pos desc">A summer internship that extended through the academic year; this internship involved building an intrusion detection system for a cloud environment and an application detection engine to go with it.</div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="flag">Goldman Sachs Services Pvt. Ltd.</span>
+                            <span class="time-wrapper"><span class="time"> May 2018 - July 2018</span></span>
+                        </div>
+                        <div class="pos">Summer Analyst</div>
+                        <div class="pos desc">...</div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <script src="static/timeline.js"></script>
+        
+    </div> <!-- End of content -->
+    
+</body>    
 
+<script src="static/profile.js"></script>    
 </html>
