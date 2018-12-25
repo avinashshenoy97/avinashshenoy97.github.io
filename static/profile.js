@@ -10,14 +10,14 @@ function checkNavPos() {
         navBarEle.style.top = 0;
         navBarEle.style.left = 0;
         document.getElementById("content").style.paddingTop = "80px";
-        if(document.getElementById("navLeftArea").children[0].className.search("active") == -1)
-            document.getElementById("navLeftArea").children[0].className += "active ";
+        // if(document.getElementById("navLeftArea").children[0].className.search("active") == -1)
+        //     document.getElementById("navLeftArea").children[0].className += "active ";
         //document.body.removeEventListener("mousewheel", checkNavPos);
     }
     else {
         navBarEle.style = "";
         document.getElementById("content").style.paddingTop = "0";
-        document.getElementById("navLeftArea").children[0].className.replace("active", "");
+        // document.getElementById("navLeftArea").children[0].className.replace("active", "");
     }
 }
 

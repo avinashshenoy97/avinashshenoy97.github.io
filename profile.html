@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
@@ -56,10 +56,10 @@
         }
     </script>
     
-    <nav class="navbar navbar-inverse" id="navBar">
+    <!-- <nav class="navbar navbar-inverse" id="navBar">
         <div class="container-fluid">
             <div class="navbar-header navBarLeft" style="padding: 15px;">
-                <a class="navbar-brand navBarLeft" href="#header" onclick="restartSite();">Avinash Shenoy</a>
+                <a class="navbar-brand navBarLeft" onclick="restartSite();">Avinash Shenoy</a>
             </div>
             <ul class="nav navbar-nav" id="navLeftArea">
                 <li><a href="#about">About Me</a></li>
@@ -75,7 +75,34 @@
                 <li><a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/snapColorGlyph.png" style="width: 50px;"/> </a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+    <div class="row" id="navBar">
+        <div class="col-4" id="navLeftArea">
+            <span class="clickable" onclick="restartSite()">Avinash Shenoy</span>
+        </div>
+        <div class="col-8">
+            <div class="row" style="height: 50px;">
+                <div class="col-2" style="padding: 12px;">
+                    <h6 id="findMeOn" style="color: white; margin: 0;"> Find Me On :</h4>
+                </div>
+                <div class="col-2">
+                    <a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/instaColorGlyph.png" style="width: 50px;"/> </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/snapColorGlyph.png" style="width: 50px;"/> </a>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script>
         function iconColor(event) {
@@ -95,7 +122,7 @@
             dis[e].addEventListener("mouseover", iconColor);
             enabs[e].addEventListener("mouseleave", iconDeColor);
             
-            var temp = ((80 - dis[e].offsetHeight) / 2) + "px";
+            var temp = ((50 - dis[e].offsetHeight) / 2) + "px";
             dis[e].parentNode.parentNode.style.setProperty("padding-top", temp, "important");
             dis[e].parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
             //dis[e].parentNode.parentNode.style.paddingTop = temp;
@@ -103,10 +130,10 @@
             //console.log(dis[e].parentNode.parentNode);
         }
         
-        var tempele = document.getElementById("findMeOn");
-        var temp = ((80 - tempele.offsetHeight) / 2) + "px";
-        tempele.style.setProperty("padding-top", temp, "important");
-        tempele.style.setProperty("padding-bottom", temp, "important");
+        // var tempele = document.getElementById("findMeOn");
+        // var temp = ((80 - tempele.offsetHeight) / 2) + "px";
+        // tempele.style.setProperty("padding-top", temp, "important");
+        // tempele.style.setProperty("padding-bottom", temp, "important");
     </script>
     
     <div id="content" style="height: 1000px;">
