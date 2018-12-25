@@ -19,7 +19,7 @@
 
 <body>
     <div id="header">
-        <img src="static/images/header.jpg" />
+        <img src="static/images/header.jpg" onload="setHeaderBG()"/>
         <h1 id="typed"></h1>
         
         <script>
@@ -51,7 +51,9 @@
     <!--<img src="static/images/headerBG.png" id="headerBG" />-->
     <div id="headerBG"></div>
     <script>
-        document.getElementById("headerBG").style.height = document.getElementById("header").offsetHeight + "px";
+        function setHeaderBG() {
+            document.getElementById("headerBG").style.height = document.getElementById("header").offsetHeight + "px";
+        }
     </script>
     
     <nav class="navbar navbar-inverse" id="navBar">
