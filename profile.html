@@ -15,6 +15,17 @@
     
     <link rel="stylesheet" type="text/css" href="static/style/profile.css" />
     <link rel="stylesheet" type="text/css" href="static/style/timeline.css" />
+    
+    <script type="text/javascript">
+        function setHeaderBG() {
+            var ele = document.getElementById("headerBG");
+            if(!ele) {
+                setTimeout(setHeaderBG, 1000);
+                return;
+            }
+            ele.style.height = document.getElementById("header").offsetHeight + "px";
+        }
+    </script>
 </head>
 
 <body>
@@ -48,34 +59,8 @@
         </script>
     </div>
     
-    <!--<img src="static/images/headerBG.png" id="headerBG" />-->
     <div id="headerBG"></div>
-    <script>
-        function setHeaderBG() {
-            document.getElementById("headerBG").style.height = document.getElementById("header").offsetHeight + "px";
-        }
-    </script>
     
-    <!-- <nav class="navbar navbar-inverse" id="navBar">
-        <div class="container-fluid">
-            <div class="navbar-header navBarLeft" style="padding: 15px;">
-                <a class="navbar-brand navBarLeft" onclick="restartSite();">Avinash Shenoy</a>
-            </div>
-            <ul class="nav navbar-nav" id="navLeftArea">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li style="padding: 0 !important;"><h4 id="findMeOn" style="color: white; margin: 0;"> Find Me On :</h4></li>
-                <li><a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a></li>
-                <li><a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a></li>
-                <li><a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a></li>
-                <li><a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/instaColorGlyph.png" style="width: 50px;"/> </a></li>
-                <li><a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/snapColorGlyph.png" style="width: 50px;"/> </a></li>
-            </ul>
-        </div>
-    </nav> -->
     <div class="row" id="navBar">
         <div class="col-4" id="navLeftArea">
             <span class="clickable" onclick="restartSite()">Avinash Shenoy</span>
@@ -84,126 +69,134 @@
             <div class="row" style="height: 50px;">
                 <div class="col-2" style="padding: 12px;">
                     <h6 id="findMeOn" style="color: white; margin: 0;"> Find Me On :</h4>
-                </div>
-                <div class="col-2">
-                    <a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a>
-                </div>
-                <div class="col-2">
-                    <a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a>
-                </div>
-                <div class="col-2">
-                    <a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a>
-                </div>
-                <div class="col-2">
-                    <a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/instaColorGlyph.png" style="width: 50px;"/> </a>
-                </div>
-                <div class="col-2">
-                    <a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" style="width: 50px;"/><img class="enab" src="static/images/snapColorGlyph.png" style="width: 50px;"/> </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function iconColor(event) {
-            event.target.style.display = "none";
-            event.target.nextSibling.style.display = "block";
-        }
-        
-        function iconDeColor(event) {
-            event.target.style.display = "none";
-            event.target.previousSibling.style.display = "block";
-            //console.log("de", event.target);
-        }
-
-        function padIcons(event) {
-            var temp = ((50 - event.target.offsetHeight) / 2) + "px";
-            event.target.parentNode.parentNode.style.setProperty("padding-top", temp, "important");
-            event.target.parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
-        }
-        
-        var dis = document.getElementsByClassName("dis");
-        var enabs = document.getElementsByClassName("enab");
-        for(var e = 0 ; e < dis.length ; e++) {
-            dis[e].addEventListener("mouseover", iconColor);
-            enabs[e].addEventListener("mouseleave", iconDeColor);
-
-            dis[e].addEventListener("load", padIcons);
-            enabs[e].addEventListener("load", padIcons);
-            
-            //dis[e].parentNode.parentNode.style.paddingTop = temp;
-            //dis[e].parentNode.parentNode.style.paddingBottom = temp;            
-            //console.log(dis[e].parentNode.parentNode);
-        }
-        
-        // var tempele = document.getElementById("findMeOn");
-        // var temp = ((80 - tempele.offsetHeight) / 2) + "px";
-        // tempele.style.setProperty("padding-top", temp, "important");
-        // tempele.style.setProperty("padding-bottom", temp, "important");
-    </script>
-    
-    <div id="content" style="height: 1000px;">
-        <div id="about">
-            <div class="left">
-                <img src="static/images/about.jpg" />
-            </div>
-            <div class="right">
-                <h1 class="sectionTitles">About Me</h1>
-                <div style="text-align: center;">
-                    <h3>Who Am I?</h3>
-                    <p>I'm Avinash Shenoy! A computer science engineering undergrad/gym rat in my 20s, currently living in Bangalore, the silicon valley of India!</p>
-                    
-                    <h3>What do I do?</h3>
-                    <p>I code. I lift. I read. I travel.</p>
-                    
-                    <h3>What do I really do?</h3>
-                    <p>I'm an undergrad student at PES University, pursuing a BTech degree in Computer Science and Engineering. </p>
-
+                    </div>
+                    <div class="col-2">
+                        <a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a>
+                    </div>
+                    <div class="col-2">
+                        <a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a>
+                    </div>
+                    <div class="col-2">
+                        <a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" /><img class="enab" src="static/images/instaColorGlyph.png" /> </a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" /><img class="enab" src="static/images/snapColorGlyph.png" /> </a>
+                    </div>
                 </div>
             </div>
         </div>
+        
         <script>
-            var tempele = document.getElementById("about").children[0];
-            var temp = tempele.offsetWidth - tempele.children[0].offsetWidth;
-            tempele.children[0].style.marginLeft = tempele.children[0].style.marginRight = (temp / 2) + "px";
-            temp = tempele.offsetHeight - tempele.children[0].offsetHeight;
-            tempele.children[0].style.marginTop = tempele.children[0].style.marginBottom = (temp / 2) + "px";
+            function iconColor(event) {
+                event.target.style.display = "none";
+                event.target.nextSibling.style.display = "block";
+            }
+            
+            function iconDeColor(event) {
+                event.target.style.display = "none";
+                event.target.previousSibling.style.display = "block";
+            }
+            
+            function padIcons(event) {
+                var temp = ((50 - event.target.offsetHeight) / 2) + "px";
+                event.target.parentNode.parentNode.style.setProperty("padding-top", temp, "important");
+                event.target.parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
+            }
+            
+            var dis = document.getElementsByClassName("dis");
+            var enabs = document.getElementsByClassName("enab");
+            for(var e = 0 ; e < dis.length ; e++) {
+                dis[e].addEventListener("mouseover", iconColor);
+                enabs[e].addEventListener("mouseleave", iconDeColor);
+                
+                dis[e].addEventListener("load", padIcons);
+                enabs[e].addEventListener("load", padIcons);
+            }
         </script>
         
-        <div id="timeline-wrapper">
-            <!-- The Timeline -->
+        <div id="content" style="height: 1000px;">
+            <div id="about" class="row">
+                <div class="col-4" style="border-right: 2px solid black;">
+                    <div class="row"></div>
+                    <div class="row" style="height: 60%;">
+                        <div class="col-2"></div>
+                        <div class="col-8" style="padding: 0;">
+                            <img src="static/images/about.jpg" />
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row"></div>
+                </div>
+                <div class="col-8" style="padding: 15px 30px;">
+                    <div class="row"> <div class="col-12">
+                        <h1 class="sectionTitles">About Me</h1>
+                    </div> </div>
+                    <div style="text-align: center;">
+                        <h3>Who Am I?</h3>
+                        <p>I'm Avinash Shenoy! A computer science engineering undergrad/gym rat in my 20s, currently living in Bangalore, the silicon valley of India!</p>
+                        
+                        <h3>What do I do?</h3>
+                        <p>I code. I lift. I read. I travel.</p>
+                        
+                        <h3>What do I really do?</h3>
+                        <p>I'm an undergrad student at PES University, pursuing a BTech degree in Computer Science and Engineering. </p>
+                        
+                    </div>
+                </div>
+            </div>
             
-            <ul class="timeline">
-
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">Centre for Cloud Computing and Big Data, PES University</span>
-                            <span class="time-wrapper"><span class="time">June 2017 - May 2018</span></span>
-                        </div>
-                        <div class="pos">Research Intern</div>
-                        <div class="pos desc">A summer internship that extended through the academic year; this internship involved building an intrusion detection system for a cloud environment and an application detection engine to go with it.</div>
-                    </div>
-                </li>
+            <div id="timeline-wrapper">
+                <!-- The Timeline -->
                 
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="flag">Goldman Sachs Services Pvt. Ltd.</span>
-                            <span class="time-wrapper"><span class="time"> May 2018 - July 2018</span></span>
-                        </div>
-                        <div class="pos">Summer Analyst</div>
-                        <div class="pos desc">...</div>
+                <div class="hello-bar">
+                    <div class="row center">
+                        
                     </div>
-                </li>
+                </div>
                 
-            </ul>
-        </div>
-        <script src="static/timeline.js"></script>
+                <div class="row">
+                    <div class="timeline">
+                        <div class="line">
+                            <div class="start">
+                                
+                            </div>
+                            <div class="end">
+                                
+                            </div>
+                        </div>
+                        <div class="event" style="height: 375px;">
+                            <div>
+                                May 2017 - April 2018
+                            </div>
+                            <div class="date">
+                                Centre for Cloud Computing and Big Data PES University
+                            </div>
+                            <div class="details">
+                                <h4>Research Intern</h4>
+                                A summer internship that extended through the academic year; this internship involved building an intrusion detection system for a cloud environment and an application detection engine to go with it.
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div>
+                                May 2018 - July 2018
+                            </div>
+                            <div class="date">
+                                Goldman Sachs
+                            </div>
+                            <div class="details">
+                                <h4>Summer Analyst</h4>
+                                ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div> <!-- End of content -->
         
-    </div> <!-- End of content -->
+    </body>    
     
-</body>    
-
-<script src="static/profile.js"></script>    
-</html>
+    <script src="static/profile.js"></script>    
+    </html>

@@ -63,7 +63,6 @@ body {
     background-color: white;
     background-repeat:repeat-y;
     position: relative;
-    padding-top: 125px;
 }
 
 .enab {
@@ -111,8 +110,12 @@ body {
     margin-top: 30px;
 }
 
+#about .row {
+    height: 20%;
+}
+
 #about img {
-    width: 250px;
+    width: 100%;
     height: auto;
     margin: auto;
     text-align: center;
@@ -122,5 +125,15 @@ body {
 .sectionTitles {
     font-family: 'Permanent Marker';
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0;
+}
+
+.enab {
+    height: 100%;
+    width: auto;
+}
+
+.dis {
+    height: 100%;
+    width: auto;
 }
