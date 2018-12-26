@@ -115,16 +115,22 @@
             event.target.previousSibling.style.display = "block";
             //console.log("de", event.target);
         }
+
+        function padIcons(event) {
+            var temp = ((50 - event.target.offsetHeight) / 2) + "px";
+            event.target.parentNode.parentNode.style.setProperty("padding-top", temp, "important");
+            event.target.parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
+        }
         
         var dis = document.getElementsByClassName("dis");
         var enabs = document.getElementsByClassName("enab");
         for(var e = 0 ; e < dis.length ; e++) {
             dis[e].addEventListener("mouseover", iconColor);
             enabs[e].addEventListener("mouseleave", iconDeColor);
+
+            dis[e].addEventListener("load", padIcons);
+            enabs[e].addEventListener("load", padIcons);
             
-            var temp = ((50 - dis[e].offsetHeight) / 2) + "px";
-            dis[e].parentNode.parentNode.style.setProperty("padding-top", temp, "important");
-            dis[e].parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
             //dis[e].parentNode.parentNode.style.paddingTop = temp;
             //dis[e].parentNode.parentNode.style.paddingBottom = temp;            
             //console.log(dis[e].parentNode.parentNode);
