@@ -7,7 +7,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 112.5%;
     line-height: 1.6em;
-    height: 500px;
+    height: 600px;
 }
 
 /* ================ The Timeline ================ */
@@ -19,10 +19,11 @@
 }
 .timeline .line {
     width: 5px;
-    height: 500px;
+    height: 525px;
     min-height: 250px;
     background: #393939;
     margin: 0 auto;
+    top: 70px;
     left: 50%;
     right: 50%;
     z-index: 1;
@@ -32,7 +33,7 @@
     font-size: 32px;
     position: absolute;
     top: -45px;
-    left: -35px;
+    left: -75px;
 }
 .timeline .end {
     font-size: 32px;
@@ -45,7 +46,7 @@
     height: 200px;
     text-align: center;
     box-shadow: 0 0.01em 0.01em #000;
-    margin: 50px 0 0 5%;
+    margin: 125px 0 0 5%;
     padding: 25px;
     background: #fff;
     z-index: 2;
