@@ -68,135 +68,157 @@
         <div class="col-8">
             <div class="row" style="height: 50px;">
                 <div class="col-2" style="padding: 12px;">
-                    <h6 id="findMeOn" style="color: white; margin: 0;"> Find Me On :</h4>
+                    <p id="findMeOn" style="color: white; margin: 0;"> Find Me On :</p>
+                </div>
+                <div class="col-2">
+                    <a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" /><img class="enab" src="static/images/instaColorGlyph.png" /> </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" /><img class="enab" src="static/images/snapColorGlyph.png" /> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        function iconColor(event) {
+            event.target.style.display = "none";
+            event.target.nextSibling.style.display = "block";
+        }
+        
+        function iconDeColor(event) {
+            event.target.style.display = "none";
+            event.target.previousSibling.style.display = "block";
+        }
+        
+        function padIcons(event) {
+            var temp = ((50 - event.target.offsetHeight) / 2) + "px";
+            event.target.parentNode.parentNode.style.setProperty("padding-top", temp, "important");
+            event.target.parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
+        }
+        
+        var dis = document.getElementsByClassName("dis");
+        var enabs = document.getElementsByClassName("enab");
+        for(var e = 0 ; e < dis.length ; e++) {
+            dis[e].addEventListener("mouseover", iconColor);
+            enabs[e].addEventListener("mouseleave", iconDeColor);
+            
+            // dis[e].addEventListener("load", padIcons);
+            // enabs[e].addEventListener("load", padIcons);
+        }
+    </script>
+    
+    <div id="content" style="height: 1000px;">
+        <div id="about" class="row">
+            <div class="col-4" style="border-right: 2px solid black;">
+                <div class="row"></div>
+                <div class="row" style="height: 60%;">
+                    <div class="col-2"></div>
+                    <div class="col-8" style="padding: 0;">
+                        <img src="static/images/about.jpg" />
                     </div>
-                    <div class="col-2">
-                        <a> <img class="dis" src="static/images/gitBlackGlyph.png" /><img class="enab" src="static/images/gitColorGlyph.png" /> </a>
+                    <div class="col-2"></div>
+                </div>
+                <div class="row"></div>
+            </div>
+            <div class="col-8" style="padding: 15px 30px;">
+                <div class="row"> <div class="col-12">
+                    <h1 class="sectionTitles">About Me</h1>
+                </div> </div>
+                <div style="text-align: center;">
+                    <h3>Who Am I?</h3>
+                    <p>I'm Avinash Shenoy! A computer science engineering undergrad/gym rat in my 20s, currently living in Bangalore, the silicon valley of India!</p>
+                    
+                    <h3>What do I do?</h3>
+                    <p>I code. I lift. I read. I travel.</p>
+                    
+                    <h3>What do I really do?</h3>
+                    <p>I'm an undergrad student at PES University, pursuing a BTech degree in Computer Science and Engineering. </p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div id="timeline-wrapper">
+            <!-- The Timeline -->
+            
+            <div class="hello-bar">
+                <div class="row center">
+                    
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="timeline">
+                    <div class="line">
+                        <div class="start">
+                            Experience
+                        </div>
+                        <div class="end">
+                            
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <a> <img class="dis" src="static/images/linkedBlackGlyph.png" /><img class="enab" src="static/images/linkedColorGlyph.png" /> </a>
+                    <div class="event">
+                        <div>
+                            Jan 2019 - Present 
+                        </div>
+                        <div class="date">
+                            Goldman Sachs
+                        </div>
+                        <div class="details">
+                            <h4>Intern</h4>
+                            Intern at Goldman Sachs' Technology federation, in the Model Risk Technology team.
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <a> <img class="dis" src="static/images/fbBlackGlyph.png" /><img class="enab" src="static/images/fbColorGlyph.png" /> </a>
+                    <div class="event">
+                        <div>
+                            May 2018 - July 2018
+                        </div>
+                        <div class="date">
+                            Goldman Sachs
+                        </div>
+                        <div class="details">
+                            <h4>Summer Analyst</h4>
+                            Intern at Goldman Sachs' Technology federation, in the Model Risk Technology team.
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <a href="https://www.instagram.com/avinashshenoy97/"> <img class="dis" src="static/images/instaBlackGlyph.png" /><img class="enab" src="static/images/instaColorGlyph.png" /> </a>
-                    </div>
-                    <div class="col-2">
-                        <a href="https://www.snapchat.com/add/grizlyburr"> <img class="dis" src="static/images/snapBlackGlyph.png" /><img class="enab" src="static/images/snapColorGlyph.png" /> </a>
+                    <div class="event" style="height: 375px;">
+                        <div>
+                            May 2017 - April 2018
+                        </div>
+                        <div class="date">
+                            Centre for Cloud Computing and Big Data PES University
+                        </div>
+                        <div class="details">
+                            <h4>Research Intern</h4>
+                            A summer internship that extended through the academic year; this internship involved building an intrusion detection system for a cloud environment and an application detection engine to go with it.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <script>
-            function iconColor(event) {
-                event.target.style.display = "none";
-                event.target.nextSibling.style.display = "block";
-            }
-            
-            function iconDeColor(event) {
-                event.target.style.display = "none";
-                event.target.previousSibling.style.display = "block";
-            }
-            
-            function padIcons(event) {
-                var temp = ((50 - event.target.offsetHeight) / 2) + "px";
-                event.target.parentNode.parentNode.style.setProperty("padding-top", temp, "important");
-                event.target.parentNode.parentNode.style.setProperty("padding-bottom", temp, "important");
-            }
-            
-            var dis = document.getElementsByClassName("dis");
-            var enabs = document.getElementsByClassName("enab");
-            for(var e = 0 ; e < dis.length ; e++) {
-                dis[e].addEventListener("mouseover", iconColor);
-                enabs[e].addEventListener("mouseleave", iconDeColor);
-                
-                // dis[e].addEventListener("load", padIcons);
-                // enabs[e].addEventListener("load", padIcons);
-            }
-        </script>
-        
-        <div id="content" style="height: 1000px;">
-            <div id="about" class="row">
-                <div class="col-4" style="border-right: 2px solid black;">
-                    <div class="row"></div>
-                    <div class="row" style="height: 60%;">
-                        <div class="col-2"></div>
-                        <div class="col-8" style="padding: 0;">
-                            <img src="static/images/about.jpg" />
-                        </div>
-                        <div class="col-2"></div>
-                    </div>
-                    <div class="row"></div>
-                </div>
-                <div class="col-8" style="padding: 15px 30px;">
-                    <div class="row"> <div class="col-12">
-                        <h1 class="sectionTitles">About Me</h1>
-                    </div> </div>
-                    <div style="text-align: center;">
-                        <h3>Who Am I?</h3>
-                        <p>I'm Avinash Shenoy! A computer science engineering undergrad/gym rat in my 20s, currently living in Bangalore, the silicon valley of India!</p>
-                        
-                        <h3>What do I do?</h3>
-                        <p>I code. I lift. I read. I travel.</p>
-                        
-                        <h3>What do I really do?</h3>
-                        <p>I'm an undergrad student at PES University, pursuing a BTech degree in Computer Science and Engineering. </p>
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div id="timeline-wrapper">
-                <!-- The Timeline -->
-                
-                <div class="hello-bar">
-                    <div class="row center">
-                        
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="timeline">
-                        <div class="line">
-                            <div class="start">
-                                Experience
-                            </div>
-                            <div class="end">
-                                
-                            </div>
-                        </div>
-                        <div class="event" style="height: 375px;">
-                            <div>
-                                May 2017 - April 2018
-                            </div>
-                            <div class="date">
-                                Centre for Cloud Computing and Big Data PES University
-                            </div>
-                            <div class="details">
-                                <h4>Research Intern</h4>
-                                A summer internship that extended through the academic year; this internship involved building an intrusion detection system for a cloud environment and an application detection engine to go with it.
-                            </div>
-                        </div>
-                        <div class="event">
-                            <div>
-                                May 2018 - July 2018
-                            </div>
-                            <div class="date">
-                                Goldman Sachs
-                            </div>
-                            <div class="details">
-                                <h4>Summer Analyst</h4>
-                                ...
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-        </div> <!-- End of content -->
+        <div id="projects">
+            <span class="project">
+
+            </span>
+            <span class="project">
+
+            </span>
+        </div>
+    </div> <!-- End of content -->
         
     </body>    
     
     <script src="static/profile.js"></script>    
-    </html>
+</html>

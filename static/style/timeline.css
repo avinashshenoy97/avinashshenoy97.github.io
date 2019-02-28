@@ -1,13 +1,13 @@
 #timeline-wrapper {	
     margin: 0;
     padding: 0;
-    background: rgba(93, 173, 226, 0.25);
+    background: rgba(207, 229, 245);
     
     color: rgb(50,50,50);
     font-family: 'Open Sans', sans-serif;
     font-size: 112.5%;
     line-height: 1.6em;
-    height: 600px;
+    height: 900px;
 }
 
 /* ================ The Timeline ================ */
@@ -19,7 +19,7 @@
 }
 .timeline .line {
     width: 5px;
-    height: 525px;
+    height: 800px;
     min-height: 250px;
     background: #393939;
     margin: 0 auto;

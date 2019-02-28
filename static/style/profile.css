@@ -4,7 +4,14 @@
 
 body {
     margin: 0;
+    min-width: 753px;
+    overflow-x: hidden;
 }
+
+/* body > * {
+    position: relative;
+    left: 0;
+} */
 
 #header {
     width: 100%;
@@ -43,10 +50,11 @@ body {
 #navBar * {
     color: whitesmoke;
     z-index: 3;
+    height: 100%;
 }
 
 #navBar > * {
-    height: inherit;
+    height: 100%;
     padding: 15px;
 }
 
@@ -136,4 +144,30 @@ body {
 .dis {
     height: 100%;
     width: auto;
+}
+
+#projects {
+    height: 500px;
+    background-color: aliceblue;
+    width: 5000px;
+    overflow: scroll;
+    position: relative;
+    left: 0;
+}
+
+.project {
+    position: relative;
+    top: 30px;
+    height: 400px;
+    width: 700px;
+    background-color: rgba(30, 144, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 25px 25px rgba(30, 144, 255, 0.2);
+    display: inline-block;
+    margin-right: 25px;
+    margin-left: 25px;
+    transition-delay: 0ms;
+    transition-duration: 25ms;
+    transition-property: left;
+    transition-timing-function: ease-in-out;
 }
